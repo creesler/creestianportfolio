@@ -7,6 +7,12 @@ import nextjs from '../assets/nextjs.png';
 import graphql from '../assets/graphql.png';
 import github from '../assets/github.png';
 import tailwind from '../assets/tailwind.png';
+import photoshop from '../assets/photoshop.png';
+import illustrator from '../assets/illustrator.png';
+import blender from '../assets/blender.png';
+import aftereffects from '../assets/aftereffects.png';
+import premiere from '../assets/premiere.png';
+import davinciresolve from '../assets/davinciresolve.png';
 
 
 const Experience = () => {
@@ -14,15 +20,15 @@ const Experience = () => {
     const techs = [
         {
             id: 1,
-            src: html,
-            title: 'HTML',
-            style: 'shadow-orange-500',
+            src: photoshop,
+            title: 'Photoshop',
+            style: 'shadow-blue-500',
         },
         {
             id: 2,
-            src: css,
-            title: 'CSS',
-            style: 'shadow-blue-500',
+            src: illustrator,
+            title: 'Illustrator',
+            style: 'shadow-orange-500',
         },
         {
             id: 3,
@@ -38,26 +44,26 @@ const Experience = () => {
         },
         {
             id: 5,
-            src: tailwind,
-            title: 'Tailwind',
-            style: 'shadow-sky-500',
+            src: blender,
+            title: 'Blender',
+            style: 'shadow-orange-500',
         },
         {
             id: 6,
-            src: nextjs,
-            title: 'Nest JS',
+            src: aftereffects,
+            title: 'After Effects',
             style: 'shadow-white',
         },
         {
             id: 7,
-            src: graphql,
-            title: 'GraphQL',
+            src: premiere,
+            title: 'Premiere Pro',
             style: 'shadow-pink-400',
         },
         {
             id: 8,
-            src: github,
-            title: 'GitHub',
+            src: davinciresolve,
+            title: 'Davinci Resolve',
             style: 'shadow-gray-400',
         },
     ]
