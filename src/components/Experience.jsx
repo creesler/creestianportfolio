@@ -9,7 +9,7 @@ import github from '../assets/github.png';
 import tailwind from '../assets/tailwind.png';
 
 
-const Experience2 = () => {
+const Experience = () => {
 
     const techs = [
         {
@@ -62,9 +62,10 @@ const Experience2 = () => {
         },
     ]
     return ( 
-        <div name='experience2' className='py-0 w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white'>
+        <div name='experience' className='py-0 w-full h-full bg-gradient-to-b from-gray-800 to-black text-white'>
             <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
                 <div className='pb-8'>
+                
                     <p className='text-4xl font-bold inline border-b-4 border-gray-500'>Experience</p>
                     <p className='py-1'>These are the technologssssies I know...</p>
                 </div>
@@ -79,9 +80,10 @@ const Experience2 = () => {
                         ))
                     }
                 </div>
+                
             </div>
         </div>
     );
 };
 
-export default Experience2
+export default Experience
