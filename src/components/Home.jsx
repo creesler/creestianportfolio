@@ -12,6 +12,9 @@ const Home = () => {
             <div className='flex flex-col justify-center h-full'>
                 <br/>
                 <br/>
+                <p className='text-gray-500 py-4 max-w-md'>
+                    My name is <b className='text-white'>Christian Earl Turaja</b></p>
+                
                 <h2 className='flex-row text-4xl sm:text-7xl font-bold text-white'>I'm a</h2>
                 <h2 className='flex-row text-4xl sm:text-1xl font-bold text-white'>
                     <Typewriter 
@@ -22,7 +25,7 @@ const Home = () => {
                             delay: 40,
                             strings: [
                                 "Wordpress Developer...",
-                                "Web Developer...",
+                                "Fullstack Web Developer...",
                                 "Graphics Designer...",
                                 "Video Editor...",
                                 "Mobile Developer...",
@@ -37,9 +40,8 @@ const Home = () => {
                            
                 
                 <p className='text-gray-500 py-4 max-w-md'>
-                    I have 8 years of experience building and designing software.
-                    Currenty, I love to work on web application using technologies
-                    like React, Tailwind, Next JS and GraphQL.
+                    Your multi skilled Virtual Assistant from the <b className='text-white'>Philippines</b>, with years of experience
+                    in the IT Industry. Trust me, I can help you grow your business.
                 </p>
 
                 <div>

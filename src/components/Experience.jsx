@@ -7,6 +7,8 @@ import blender from '../assets/blender.png';
 import aftereffects from '../assets/aftereffects.png';
 import premiere from '../assets/premiere.png';
 import davinciresolve from '../assets/davinciresolve.png';
+import node from '../assets/node.png';
+import python from '../assets/python.png';
 
 
 const Experience = () => {
@@ -60,13 +62,29 @@ const Experience = () => {
             title: 'Davinci Resolve',
             style: 'shadow-gray-400',
         },
+        {
+            id: 8,
+            src: node,
+            title: 'NodeJs',
+            style: 'shadow-green-400',
+        },
+        {
+            id: 8,
+            src: python,
+            title: 'Python',
+            style: 'shadow-blue-400',
+        },
     ]
     return ( 
         <div name='experience' className='py-0 w-full h-full bg-gradient-to-b from-gray-800 to-black text-white'>
             <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
                 <div className='pb-8'>
-                
+                    <br />
+                    <br />
+                    <br />  
                     <p className='text-4xl font-bold inline border-b-4 border-gray-500'>Experience</p>
+                    <br />
+                    <br />
                     <p className='py-1'>These are the technologssssies I know...</p>
                 </div>
 
