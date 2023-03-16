@@ -30,7 +30,6 @@ const Home = () => {
                                 "Video Editor...",
                                 "Mobile Developer...",
                                 "3d Artist/Animator...",
-                                "Ebay/Amazon/Shopify Lister...",
                                 "Email/Chat Support...",
                             ],
                         }}
