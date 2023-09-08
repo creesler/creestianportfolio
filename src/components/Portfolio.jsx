@@ -76,11 +76,11 @@ const Portfolio = () => {
                         <div className='gallery'>
                             {data.map((item, index) => {
                                 let divRef = createRef(null);
-                                const openModel = () => {
-                                    divRef.current.classList.remove('video');
-                                    divRef.current.classList.add('model');
-                                    setModel(true);
-                                }
+                                // const openModel = () => {
+                                //     divRef.current.classList.remove('video');
+                                //     divRef.current.classList.add('model');
+                                //     setModel(true);
+                                // }
                                 const closeModel = () => {
                                     divRef.current.classList.add('video');
                                     divRef.current.classList.remove('model');
