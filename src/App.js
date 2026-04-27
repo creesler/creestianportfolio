@@ -6,6 +6,7 @@ import Portfolio from "./components/Portfolio";
 import SocialLinks from "./components/SocialLinks";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
+import ShootingStar from "./components/ShootingStar";
 
 function App() {
   useEffect(() => {
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <div className="bg-[#0a0a0f] w-full min-h-screen text-white overflow-hidden">
+      <ShootingStar />
       <NavBar />
       <Home />
       <About />
