@@ -9,6 +9,14 @@ import pdfVid from '../assets/videos/pdf_extraction_with_email_notif.mp4';
 import waImg from '../assets/videos/whatsapp_autorespond.png';
 import waVid from '../assets/videos/whatsapp_autorespond.mp4';
 
+// New Image Gallery Imports
+import smsImg from '../assets/videos/IMAGE/Automated sms sender Openphone.png';
+import multiAgentImg from '../assets/videos/IMAGE/Multi Agent Army Google Workspace.png';
+import nodeRecordImg from '../assets/videos/IMAGE/NodeJS Web automation recorder.png';
+import psegImg from '../assets/videos/IMAGE/Web automation Auto payment for PSEG.png';
+import nodeWebImg from '../assets/videos/IMAGE/Web automation connected to Node server.png';
+import zillowImg from '../assets/videos/IMAGE/Zillow browser extension scraper.png';
+
 const Portfolio = () => {
   const [titleRef, titleVis] = useReveal();
   const [activeVideo, setActiveVideo] = useState(null);
@@ -39,6 +47,60 @@ const Portfolio = () => {
       tags: ['N8N', 'WhatsApp', 'Gemini AI', 'Sheets'],
       img: waImg,
       video: waVid,
+      accent: 'violet',
+    },
+    {
+      id: 4,
+      title: 'Automated SMS Sender OpenPhone',
+      desc: 'An automation workflow designed to send robust automated SMS marketing and notifications using OpenPhone.',
+      tags: ['Automation', 'SMS', 'OpenPhone'],
+      img: smsImg,
+      video: null,
+      accent: 'cyan',
+    },
+    {
+      id: 5,
+      title: 'Multi Agent Army Google Workspace',
+      desc: 'A multi-agent automation army seamlessly integrated with Google Workspace to intelligently handle data management.',
+      tags: ['AI Agents', 'Google Workspace', 'Automation'],
+      img: multiAgentImg,
+      video: null,
+      accent: 'blue',
+    },
+    {
+      id: 6,
+      title: 'NodeJS Web Automation Recorder',
+      desc: 'A custom-built NodeJS web automation recorder capable of capturing actions and generating replayable scripts.',
+      tags: ['NodeJS', 'Recorder', 'Automation'],
+      img: nodeRecordImg,
+      video: null,
+      accent: 'violet',
+    },
+    {
+      id: 7,
+      title: 'Auto Payment Web Automation',
+      desc: 'An automated web script that safely logs into a utility portal (PSEG) and processes recurring scheduled auto-payments.',
+      tags: ['Web Automation', 'Billing', 'Puppeteer/Playwright'],
+      img: psegImg,
+      video: null,
+      accent: 'cyan',
+    },
+    {
+      id: 8,
+      title: 'Node Server Web Automation',
+      desc: 'A robust web automation framework communicating directly with a NodeJS server, handling complex scraping and form submissions.',
+      tags: ['NodeJS', 'Web Automation', 'Backend'],
+      img: nodeWebImg,
+      video: null,
+      accent: 'blue',
+    },
+    {
+      id: 9,
+      title: 'Zillow Browser Extension Scraper',
+      desc: 'A browser extension designed to intelligently scrape incoming Zillow messages and automatically save the lead data to a Google Sheet.',
+      tags: ['Browser Extension', 'Scraper', 'Google Sheets'],
+      img: zillowImg,
+      video: null,
       accent: 'violet',
     },
   ];
@@ -116,18 +178,20 @@ const ProjectCard = ({ project, a, index, onPlay }) => {
             alt={project.title}
             className="w-full h-full object-cover rounded-xl transition-transform duration-700 group-hover:scale-[1.03]"
           />
-          {/* Play overlay */}
-          <div
-            onClick={() => onPlay(project.video)}
-            className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center cursor-pointer rounded-xl"
-          >
-            <div className={`w-16 h-16 rounded-full ${a.bg} border ${a.border} flex items-center justify-center shadow-lg ${a.glow} hover:scale-110 transition-transform`}>
-              <FaPlay className={`${a.text} ml-1`} size={20} />
+          {/* Play overlay - Only show if video exists */}
+          {project.video && (
+            <div
+              onClick={() => onPlay(project.video)}
+              className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center cursor-pointer rounded-xl"
+            >
+              <div className={`w-16 h-16 rounded-full ${a.bg} border ${a.border} flex items-center justify-center shadow-lg ${a.glow} hover:scale-110 transition-transform`}>
+                <FaPlay className={`${a.text} ml-1`} size={20} />
+              </div>
             </div>
-          </div>
+          )}
           {/* Corner badge */}
           <div className={`absolute top-3 left-3 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider ${a.tag} border backdrop-blur-sm`}>
-            Live Demo
+            {project.video ? 'Live Demo' : 'Project Snapshot'}
           </div>
         </div>
 
@@ -148,14 +212,16 @@ const ProjectCard = ({ project, a, index, onPlay }) => {
             ))}
           </div>
 
-          <button
-            onClick={() => onPlay(project.video)}
-            className={`inline-flex items-center gap-2 ${a.text} font-semibold text-sm hover:underline underline-offset-4 transition-all group/btn cursor-pointer w-fit`}
-          >
-            <FaPlay size={10} />
-            See it in Action
-            <span className="group-hover/btn:translate-x-1 transition-transform">→</span>
-          </button>
+          {project.video && (
+            <button
+              onClick={() => onPlay(project.video)}
+              className={`inline-flex items-center gap-2 ${a.text} font-semibold text-sm hover:underline underline-offset-4 transition-all group/btn cursor-pointer w-fit`}
+            >
+              <FaPlay size={10} />
+              See it in Action
+              <span className="group-hover/btn:translate-x-1 transition-transform">→</span>
+            </button>
+          )}
         </div>
       </div>
     </div>
